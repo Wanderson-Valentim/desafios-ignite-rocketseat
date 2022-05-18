@@ -35,16 +35,45 @@ export default function Post() {
   )
 }
 
-// export const getStaticPaths = async () => {
-//   const prismic = getPrismicClient({});
-//   const posts = await prismic.getByType(TODO);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient({});
+  const posts = await prismic.getByType('posts',{
+    pageSize: 30
+  });
 
-//   // TODO
-// };
+  return { 
+    paths: posts.results.map((post) => {
+      return { params: { slug: post.uid } }
+    }),
+    fallback: true,
+  }
+}
 
-// export const getStaticProps = async ({params }) => {
-//   const prismic = getPrismicClient({});
-//   const response = await prismic.getByUID(TODO);
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params
+  const prismic = getPrismicClient({});
+  const response = await prismic.getByUID('posts', slug);
 
-//   // TODO
-// };
+  console.log(response.data.content)
+
+  const post = {
+    'first_publication_date': response.first_publication_date,
+    'data': {
+      'title': response.data.title,
+      'banner': {
+        'url': response.data.banner.url
+      },
+      'author': response.data.author,
+      'content': {
+        'heading': response.data.content.heading,
+        'body': {
+          'text': response.data.content.body.text,
+        },
+      },
+    }
+  }
+
+  return{
+    props: post
+  }
+};
