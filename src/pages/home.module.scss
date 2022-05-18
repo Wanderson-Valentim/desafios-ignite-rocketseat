@@ -1,1 +1,80 @@
-// TODO
+.pageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .buttonContainer {
+        width: 48.6%;
+        margin-bottom: 80px;
+    }
+
+    .postsContainer{
+        width: 48.6%;
+
+        & > div:not(:first-child){
+            margin-top: 48px;
+        }
+
+        & > div:last-child{
+            margin-bottom: 64px;
+        }
+    }
+
+    .post{
+        a{
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--heading);
+        }
+
+        .subtitle{
+            color: var(--body);
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        & > p:first-of-type{
+            margin-top: 8px;
+            margin-bottom: 24px;
+        }
+
+        .infoContainer{
+            color: var(--info);
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+
+            & > div {
+                display: flex;
+                align-items: center;
+
+                & > :last-child{
+                    margin-left: 8px;
+                }
+            }
+
+            & > :last-child{
+                margin-left: 26px;
+                
+                p{
+                    display: inline;
+                }
+            }
+        }
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    button{
+        background: none;
+        border: none;
+        color: var(--highlight);
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
