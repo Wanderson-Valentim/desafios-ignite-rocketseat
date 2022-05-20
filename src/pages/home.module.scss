@@ -38,31 +38,6 @@
             margin-bottom: 24px;
         }
 
-        .infoContainer{
-            color: var(--info);
-            font-size: 14px;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-
-            & > div {
-                display: flex;
-                align-items: center;
-
-                & > :last-child{
-                    margin-left: 8px;
-                }
-            }
-
-            & > :last-child{
-                margin-left: 26px;
-                
-                p{
-                    display: inline;
-                }
-            }
-        }
-
         svg{
             width: 20px;
             height: 20px;

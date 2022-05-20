@@ -69,10 +69,6 @@ export default function Home({ postsPagination }:HomeProps) {
     }
   }
 
-  function haveNextPage(){
-    return nextPage === null ? true : false
-  }
-
   function formatDate(date:string){
     const formattedDate = format(
       new Date(date),
@@ -94,13 +90,15 @@ export default function Home({ postsPagination }:HomeProps) {
           <Header />
           
           <div className={styles.postsContainer}>
+
             {posts.map(post => (
               <div key={post.uid} className={styles.post}>
                 <Link href={`post/${post.uid}`}>
                   <a>{post.data.title}</a>
                 </Link>
                 <p className={styles.subtitle}>{post.data.subtitle}</p>
-                <div className={styles.infoContainer}>
+                <div className={commonStyles.infoContainer}>
+
                   <div>
                     <FiCalendar />
                     <time>{formatDate(post.first_publication_date)}</time>
@@ -109,14 +107,19 @@ export default function Home({ postsPagination }:HomeProps) {
                     <FiUser />
                     <p>{post.data.author}</p>
                   </div>
+
                 </div>
               </div>
             ))}
-          </div>
 
-          <div className={styles.buttonContainer}>
-            <button onClick={getPagination} hidden={haveNextPage()}>Carregar mais posts</button>
           </div>
+          
+          {nextPage === null ? <></> : 
+            <div className={styles.buttonContainer}>
+              <button onClick={getPagination}>Carregar mais posts</button>
+            </div>
+          }
+
       </div>
     </>
   )
@@ -125,10 +128,8 @@ export default function Home({ postsPagination }:HomeProps) {
 export const getStaticProps:GetStaticProps = async () => {
   const prismic = getPrismicClient({});
   const postsResponse = await prismic.getByType('posts', {
-    pageSize: 1
+    pageSize: 2
   });
-
-  //console.log(postsResponse.results)
 
   const results = postsResponse.results.map( post => {
     const formattingPost = {
@@ -148,8 +149,6 @@ export const getStaticProps:GetStaticProps = async () => {
     next_page: postsResponse.next_page,
     results: results
   }
-
-  //console.log(postsPagination.results)
 
   return{
     props: { postsPagination }
