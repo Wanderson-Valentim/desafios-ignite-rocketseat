@@ -1,4 +1,5 @@
-import { Image, Flex, Box, HStack } from '@chakra-ui/react'
+import { Image, Flex, Link as ChakraLink } from '@chakra-ui/react'
+import Link from 'next/link'
 
 interface HeaderProps{
     isTheContinentPage: boolean
@@ -7,17 +8,23 @@ interface HeaderProps{
 export default function Header({ isTheContinentPage }:HeaderProps): JSX.Element{
     return(
         <Flex 
-            justify="center" 
-            align="center"
+            justify={ isTheContinentPage ? "flex-start" : "center"}
             h="100px"
         >
             {
                 isTheContinentPage && 
-                <Image 
-                    src="images/header/return-icon.svg" 
-                    alt="return" w="32px" 
-                    h="32px" 
-                />
+                <Flex align="center" w="calc(50% - 92px)">
+                    <Link href="/">
+                        <ChakraLink ml="20%">
+                            <Image 
+                                src="images/header/return-icon.svg" 
+                                alt="return"
+                                w="32px" 
+                                h="32px"
+                            />
+                        </ChakraLink>
+                    </Link>
+                </Flex>
             }
 
             <Flex 
