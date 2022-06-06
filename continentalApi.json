@@ -1,164 +1,171 @@
 {
+    "continents": ["europe", "america", "africa", "asia", "oceania"],
+    
     "europe":{
+        "name": "Europa",
         "description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
         "numberOfLanguages": 150,
         "numberOfCountries": 50,
         "numberOfTop100Cities": 32,
-        "banner": "images/api_images/banners/banner-europa.png",
+        "banner": "/images/api_images/banners/banner-europa.png",
         "cities":[
             {
                 "name": "Londres",
                 "country": "Reino Unido",
-                "flag": "images/api_images/flags/europe/reino-unido.png",
-                "image": "images/api_images/cities/europe/londres.png"
+                "flag": "/images/api_images/flags/europe/reino-unido.png",
+                "image": "/images/api_images/cities/europe/londres.png"
             },
             {
                 "name": "Paris",
                 "country": "França",
-                "flag": "images/api_images/flags/europe/franca.png",
-                "image": "images/api_images/cities/europe/paris.png"
+                "flag": "/images/api_images/flags/europe/franca.png",
+                "image": "/images/api_images/cities/europe/paris.png"
             },
             {
                 "name": "Roma",
                 "country": "Itália",
-                "flag": "images/api_images/flags/europe/italia.png",
-                "image": "images/api_images/cities/europe/roma.png"
+                "flag": "/images/api_images/flags/europe/italia.png",
+                "image": "/images/api_images/cities/europe/roma.png"
             },
             {
                 "name": "Praga",
                 "country": "República Checa",
-                "flag": "images/api_images/flags/europe/republica-checa.png",
-                "image": "images/api_images/cities/europe/praga.png"
+                "flag": "/images/api_images/flags/europe/republica-checa.png",
+                "image": "/images/api_images/cities/europe/praga.png"
             }
         ]
     },
 
     "america":{
+        "name": "América",
         "description": "América é o continente localizado no hemisfério ocidental e que se estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de 15 mil quilômetros. O seu extremo oriental insular encontra-se na Groenlândia, o Nordostrundingen, enquanto o ocidental localiza-se nas Aleutas.",
         "numberOfLanguages": 1.061,
         "numberOfCountries": 36,
         "numberOfTop100Cities": 13,
-        "banner": "images/api_images/banners/banner-america.png",
+        "banner": "/images/api_images/banners/banner-america.png",
         "cities":[
             {
                 "name": "Nova York",
                 "country": "Estados Unidos",
-                "flag": "images/api_images/flags/america/estados-unidos.png",
-                "image": "images/api_images/cities/america/nova-york.png"
+                "flag": "/images/api_images/flags/america/estados-unidos.png",
+                "image": "/images/api_images/cities/america/nova-york.png"
             },
             {
                 "name": "Toronto",
                 "country": "Canadá",
-                "flag": "images/api_images/flags/america/canada.png",
-                "image": "images/api_images/cities/america/toronto.png"
+                "flag": "/images/api_images/flags/america/canada.png",
+                "image": "/images/api_images/cities/america/toronto.png"
             },
             {
                 "name": "Cancun",
                 "country": "México",
-                "flag": "images/api_images/flags/america/mexico.png",
-                "image": "images/api_images/cities/america/cancun.png"
+                "flag": "/images/api_images/flags/america/mexico.png",
+                "image": "/images/api_images/cities/america/cancun.png"
             },
             {
                 "name": "Rio de Janeiro",
                 "country": "Brasil",
-                "flag": "images/api_images/flags/america/brasil.png",
-                "image": "images/api_images/cities/america/rio-de-janeiro.png"
+                "flag": "/images/api_images/flags/america/brasil.png",
+                "image": "/images/api_images/cities/america/rio-de-janeiro.png"
             }
         ]
     },
 
     "africa":{
+        "name": "África",
         "description": "A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente mais populoso da Terra com cerca de um bilhão de pessoas, representando cerca de um sétimo da população mundial, e 54 países independentes.",
         "numberOfLanguages": 2000,
         "numberOfCountries": 54,
         "numberOfTop100Cities": 12,
-        "banner": "images/api_images/banners/banner-africa.png",
+        "banner": "/images/api_images/banners/banner-africa.png",
         "cities":[
             {
                 "name": "Joanesburgo",
                 "country": "África do Sul",
-                "flag": "images/api_images/flags/africa/africa-do-sul.png",
-                "image": "images/api_images/cities/africa/joanesburgo.png"
+                "flag": "/images/api_images/flags/africa/africa-do-sul.png",
+                "image": "/images/api_images/cities/africa/joanesburgo.png"
             },
             {
                 "name": "Cairo",
                 "country": "Egito",
-                "flag": "images/api_images/flags/africa/egito.png",
-                "image": "images/api_images/cities/africa/cairo.png"
+                "flag": "/images/api_images/flags/africa/egito.png",
+                "image": "/images/api_images/cities/africa/cairo.png"
             },
             {
                 "name": "Hurghada",
                 "country": "Egito",
-                "flag": "images/api_images/flags/africa/egito.png",
-                "image": "images/api_images/cities/africa/hurghada.png"
+                "flag": "/images/api_images/flags/africa/egito.png",
+                "image": "/images/api_images/cities/africa/hurghada.png"
             },
             {
                 "name": "Marrakech",
                 "country": "Marrocos",
-                "flag": "images/api_images/flags/africa/marrocos.png",
-                "image": "images/api_images/cities/africa/marrakech.png"
+                "flag": "/images/api_images/flags/africa/marrocos.png",
+                "image": "/images/api_images/cities/africa/marrakech.png"
             }
         ]
     },
 
     "asia":{
+        "name": "Ásia",
         "description": "A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial.",
         "numberOfLanguages": 2300,
         "numberOfCountries": 50,
         "numberOfTop100Cities": 40,
-        "banner": "images/api_images/banners/banner-asia.png",
+        "banner": "/images/api_images/banners/banner-asia.png",
         "cities":[
             {
                 "name": "Hong Kong",
                 "country": "China",
-                "flag": "images/api_images/flags/asia/china.png",
-                "image": "images/api_images/cities/asia/hong-kong.png"
+                "flag": "/images/api_images/flags/asia/china.png",
+                "image": "/images/api_images/cities/asia/hong-kong.png"
             },
             {
                 "name": "Macau",
                 "country": "China",
-                "flag": "images/api_images/flags/asia/china.png",
-                "image": "images/api_images/cities/asia/macau.png"
+                "flag": "/images/api_images/flags/asia/china.png",
+                "image": "/images/api_images/cities/asia/macau.png"
             },
             {
                 "name": "Kuala Lumpur",
                 "country": "Malásia",
-                "flag": "images/api_images/flags/asia/malasia.png",
-                "image": "images/api_images/cities/asia/kuala-lumpur.png"
+                "flag": "/images/api_images/flags/asia/malasia.png",
+                "image": "/images/api_images/cities/asia/kuala-lumpur.png"
             },
             {
                 "name": "Singapura",
                 "country": "Singapura",
-                "flag": "images/api_images/flags/asia/singapura.png",
-                "image": "images/api_images/cities/asia/singapura.png"
+                "flag": "/images/api_images/flags/asia/singapura.png",
+                "image": "/images/api_images/cities/asia/singapura.png"
             }
         ]
     },
 
     "oceania":{
+        "name": "Oceania",
         "description": "A Oceania é um continente localizado a sudeste da Ásia, compreendendo um conjunto de ilhas somado à Austrália, essa última considerada como uma massa continental chamada de “Australásia”.",
         "numberOfLanguages": 820,
         "numberOfCountries": 14,
         "numberOfTop100Cities": 3,
-        "banner": "images/api_images/banners/banner-oceania.png",
+        "banner": "/images/api_images/banners/banner-oceania.png",
         "cities":[
             {
                 "name": "Sydney",
                 "country": "Austrália",
-                "flag": "images/api_images/flags/oceania/australia.png",
-                "image": "images/api_images/cities/oceania/sydney.png"
+                "flag": "/images/api_images/flags/oceania/australia.png",
+                "image": "/images/api_images/cities/oceania/sydney.png"
             },
             {
                 "name": "Melbourne",
                 "country": "Austrália",
-                "flag": "images/api_images/flags/oceania/australia.png",
-                "image": "images/api_images/cities/oceania/melbourne.png"
+                "flag": "/images/api_images/flags/oceania/australia.png",
+                "image": "/images/api_images/cities/oceania/melbourne.png"
             },
             {
                 "name": "Auckland",
                 "country": "Nova Zelândia",
-                "flag": "images/api_images/api_images/flags/oceania/nova-zelandia.png",
-                "image": "images/api_images/cities/oceania/auckland.png"
+                "flag": "/images/api_/images/api_images/flags/oceania/nova-zelandia.png",
+                "image": "/images/api_images/cities/oceania/auckland.png"
             }
         ]
     }

@@ -17,7 +17,7 @@ export default function Header({ isTheContinentPage }:HeaderProps): JSX.Element{
                     <Link href="/">
                         <ChakraLink ml="20%">
                             <Image 
-                                src="images/header/return-icon.svg" 
+                                src="/images/header/return-icon.svg" 
                                 alt="return"
                                 w="32px" 
                                 h="32px"
@@ -32,7 +32,7 @@ export default function Header({ isTheContinentPage }:HeaderProps): JSX.Element{
                 align="center"
             >
                 <Image 
-                    src="images/header/logo.png" 
+                    src="/images/header/logo.png" 
                     alt="logo" 
                     w="184px" 
                     h="46px" 
