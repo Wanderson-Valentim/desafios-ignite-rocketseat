@@ -12,7 +12,11 @@ import Continent from "./Continent";
 
 export default function ContinentsSlide(): JSX.Element{
     return(
-        <Flex w="85%" height="450px" mb="40px">
+        <Flex 
+            w={["100%","85%"]} 
+            height={["250px","450px"]} 
+            mb={["24px","40px"]}
+        >
             <Swiper
                 cssMode={true}
                 navigation={true}

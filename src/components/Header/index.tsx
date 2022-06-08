@@ -9,18 +9,18 @@ export default function Header({ isTheContinentPage }:HeaderProps): JSX.Element{
     return(
         <Flex 
             justify={ isTheContinentPage ? "flex-start" : "center"}
-            h="100px"
+            h={["50px","100px"]}
         >
             {
                 isTheContinentPage && 
-                <Flex align="center" w="calc(50% - 92px)">
+                <Flex align="center" w={["calc(50% - 40.5px)","calc(50% - 92px)"]}>
                     <Link href="/">
                         <ChakraLink ml="20%">
                             <Image 
                                 src="/images/header/return-icon.svg" 
                                 alt="return"
-                                w="32px" 
-                                h="32px"
+                                w={["16px","32px"]}
+                                h={["16px","32px"]}
                             />
                         </ChakraLink>
                     </Link>
@@ -34,8 +34,8 @@ export default function Header({ isTheContinentPage }:HeaderProps): JSX.Element{
                 <Image 
                     src="/images/header/logo.png" 
                     alt="logo" 
-                    w="184px" 
-                    h="46px" 
+                    w={["81px","184px"]} 
+                    h={["20px","46px"]} 
                 />
             </Flex>
         </Flex>

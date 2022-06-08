@@ -36,15 +36,16 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
         backgroundImage={continent.banner}
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        align="flex-end"
-        h="500px"
+        justify={["center","flex-start"]}
+        align={["center","flex-end"]}
+        h={["150px","500px"]}
       >
         <Text
-          fontSize="48px"
+          fontSize={["28px","48px"]}
           fontWeight="600"
           color="light.text"
-          ml="140px"
-          mb="59px"
+          ml={["0px","140px"]}
+          mb={["0px","59px"]}
         >
           {continent.name}
         </Text>
@@ -53,18 +54,19 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
       <Flex 
         flexDirection="column" 
         align="center"
-        mt="80px"
-        mb="35px"
+        mt={["24px","80px"]}
+        mb={["16px","35px"]}
       >
         <Flex 
+          flexDirection={["column", "row"]}
           justify="space-between" 
-          w="80%" 
-          gap="70px"
-          mb="80px"
+          w={["90%","80%"]} 
+          gap={["16px","70px"]}
+          mb={["32px","80px"]}
         >
-          <Flex w="52%">
+          <Flex w={["100%","52%"]}>
             <Text
-              fontSize="24px"
+              fontSize={["14px","24px"]}
               fontWeight="400"
               color="dark.text"
               textAlign="justify"
@@ -82,16 +84,19 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
 
         <Box w="80%">
           <Text
-            fontSize="36px"
+            fontSize={["24px","36px"]}
             fontWeight="500"
             color="dark.text"
-            mb="40px"
+            mb={["20px","40px"]}
           >
             Cidades +100
           </Text>
         </Box>
 
-        <Cities/>
+        <Cities 
+          continent={continent.name}
+          cities={continent.cities} 
+        />
         
       </Flex>
     </>

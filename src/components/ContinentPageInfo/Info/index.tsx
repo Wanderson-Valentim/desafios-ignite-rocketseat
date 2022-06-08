@@ -1,11 +1,12 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 
 interface InfoProps{
     number: string,
-    text: string
+    text: string,
+    isElementWithIcon?: boolean
 }
 
-export default function Info( { number, text }:InfoProps ){
+export default function Info( { number, text, isElementWithIcon=false }:InfoProps ){
     return(
         <Flex 
             flexDir="column" 
@@ -13,20 +14,32 @@ export default function Info( { number, text }:InfoProps ){
             justify="center"
         >
             <Text 
-                fontSize="48px"
+                fontSize={["24px","48px"]}
                 fontWeight="600"
                 color="highlight"
             >
                 {number}
             </Text>
-            <Text 
-                fontSize="24px"
-                fontWeight="600"
-                color="dark.text"
-                whiteSpace="nowrap"
-            >
-                {text}
-            </Text>
+
+            <Flex justify="center" align="center" gap="5px">
+                <Text
+                    fontSize={["18px","24px"]}
+                    fontWeight="600"
+                    color="dark.text"
+                    whiteSpace="nowrap"
+                >
+                    {text}
+                </Text>
+
+                {isElementWithIcon && 
+                    <Image 
+                        src="/images/continent-page/info.svg" 
+                        alt="Informações"
+                        w={["10px","16px"]}
+                        h={["10px","16px"]} 
+                    />
+                }
+            </Flex>
         </Flex>
     );
   }
