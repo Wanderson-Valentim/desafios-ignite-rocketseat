@@ -18,12 +18,11 @@ export const theme = extendTheme({
         heading: 'Poppins',
         body: 'Poppins',
       },
-      /*styles: {
-        global: {
-          body: {
-            bg: 'dark.900',
-            color: 'dark.100',
-          },
-        },
-      },*/
+      breakpoints: {
+        sm: '414px',
+        md: '768px',
+        lg: '960px',
+        xl: '1200px',
+        '2xl': '1536px',
+      }
 })

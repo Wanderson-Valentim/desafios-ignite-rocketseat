@@ -41,14 +41,14 @@ export default function Continent( { sourceImage, continent, route, children }:C
                             >
                                 <Text 
                                     color="light.text" 
-                                    fontSize={["24px","48px"]} 
+                                    fontSize={["24px","24px","48px"]} 
                                     fontWeight="700"
                                 >
                                     {continent}
                                 </Text>
                                 <Text 
                                     color="light.info" 
-                                    fontSize={["14px","24px"]} 
+                                    fontSize={["14px","14px","24px"]} 
                                     fontWeight="700"
                                 >
                                     {children}

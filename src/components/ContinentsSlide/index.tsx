@@ -13,9 +13,9 @@ import Continent from "./Continent";
 export default function ContinentsSlide(): JSX.Element{
     return(
         <Flex 
-            w={["100%","85%"]} 
-            height={["250px","450px"]} 
-            mb={["24px","40px"]}
+            w={["100%","100%", "85%", "85%"]} 
+            height={["250px","250px","450px"]} 
+            mb={["24px","24px","40px"]}
         >
             <Swiper
                 cssMode={true}

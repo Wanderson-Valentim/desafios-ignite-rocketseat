@@ -36,16 +36,16 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
         backgroundImage={continent.banner}
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        justify={["center","flex-start"]}
-        align={["center","flex-end"]}
-        h={["150px","500px"]}
+        justify={["center","center","flex-start"]}
+        align={["center","center","flex-end"]}
+        h={["150px","150px","500px"]}
       >
         <Text
-          fontSize={["28px","48px"]}
+          fontSize={["28px","28px","48px"]}
           fontWeight="600"
           color="light.text"
-          ml={["0px","140px"]}
-          mb={["0px","59px"]}
+          ml={["0px","0px","140px"]}
+          mb={["0px","0px","59px"]}
         >
           {continent.name}
         </Text>
@@ -54,19 +54,19 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
       <Flex 
         flexDirection="column" 
         align="center"
-        mt={["24px","80px"]}
-        mb={["16px","35px"]}
+        mt={["24px","24px","80px"]}
+        mb={["16px","16px","35px"]}
       >
         <Flex 
-          flexDirection={["column", "row"]}
+          flexDirection={{base: "column", xl:"row"}} 
           justify="space-between" 
-          w={["90%","80%"]} 
-          gap={["16px","70px"]}
-          mb={["32px","80px"]}
+          w={["90%","90%","80%"]} 
+          gap={["16px","16px","70px"]}
+          mb={["32px","32px","80px"]}
         >
-          <Flex w={["100%","52%"]}>
+          <Flex w={{base: "100%", xl:"52%"}}>
             <Text
-              fontSize={["14px","24px"]}
+              fontSize={["14px","14px","24px"]}
               fontWeight="400"
               color="dark.text"
               textAlign="justify"
@@ -84,10 +84,10 @@ export default function ContinentPage( { continent }:ContinentPageProps ){
 
         <Box w="80%">
           <Text
-            fontSize={["24px","36px"]}
+            fontSize={["24px","24px","36px"]}
             fontWeight="500"
             color="dark.text"
-            mb={["20px","40px"]}
+            mb={["20px","20px","40px"]}
           >
             Cidades +100
           </Text>

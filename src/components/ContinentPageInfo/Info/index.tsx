@@ -14,7 +14,7 @@ export default function Info( { number, text, isElementWithIcon=false }:InfoProp
             justify="center"
         >
             <Text 
-                fontSize={["24px","48px"]}
+                fontSize={["24px","24px","48px"]}
                 fontWeight="600"
                 color="highlight"
             >
@@ -23,7 +23,7 @@ export default function Info( { number, text, isElementWithIcon=false }:InfoProp
 
             <Flex justify="center" align="center" gap="5px">
                 <Text
-                    fontSize={["18px","24px"]}
+                    fontSize={["15px","18px","24px"]}
                     fontWeight="600"
                     color="dark.text"
                     whiteSpace="nowrap"
@@ -35,8 +35,8 @@ export default function Info( { number, text, isElementWithIcon=false }:InfoProp
                     <Image 
                         src="/images/continent-page/info.svg" 
                         alt="Informações"
-                        w={["10px","16px"]}
-                        h={["10px","16px"]} 
+                        w={["10px","10px","16px"]}
+                        h={["10px","10px","16px"]} 
                     />
                 }
             </Flex>

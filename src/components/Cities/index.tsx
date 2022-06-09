@@ -14,10 +14,10 @@ interface CitiesProps{
 export default function Cities( { continent, cities }:CitiesProps ){
     return(
         <Grid 
-            templateColumns={["repeat(1, auto)","repeat(4, auto)"]} 
-            justifyContent={["center","space-between"]}
-            gridRowGap={["20px","48px"]} 
-            w={["100%","80%"]}
+            templateColumns={{base: "repeat(1, auto)", md:"repeat(3, auto)", xl:"repeat(4, auto)"}} 
+            justifyContent={["center","center","space-between"]}
+            gridRowGap={["20px","20px","48px"]} 
+            w={{base: "100%", md:"95%", xl:"85%"}} 
         >
             {cities.map((city, index) => (
                 <GridItem key={continent+String(index)}>

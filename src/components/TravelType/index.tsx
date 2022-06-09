@@ -10,26 +10,28 @@ export default function TravelType({ source, text, type }: TravelTypeProps){
     return(
         <GridItem area={type}>
             <Flex 
-                flexDir={["row","column"]} 
-                h={["21px","145px"]} 
+                flexDir={["row","row","column"]} 
+                h={["21px","21px","145px"]} 
                 align="center" 
                 justify={
                     [
+                        (type == 'type1' || type=='type3')? 'flex-start' : 
+                        ((type == 'type2' || type=='type4')? 'flex-end' : 'center'),
                         (type == 'type1' || type=='type3')? 'flex-start' : 
                         ((type == 'type2' || type=='type4')? 'flex-end' : 'center'), 
                         'center'
                     ] 
                 }
-                gap={["8px","24px"]}
+                gap={["8px","8px","24px"]}
             >
-                <Hide below='sm'>
+                <Hide below='md'>
                     <Image 
                         src={source}
-                        h="85px" 
-                        w="85px"
+                        h={{base:"70px", lg: "85px"}}
+                        w={{base:"70px", lg: "85px"}}
                     />
                 </Hide>
-                <Hide above='sm'>
+                <Hide above='md'>
                     <Box 
                         backgroundColor="highlight" 
                         borderRadius="50%"
@@ -40,7 +42,7 @@ export default function TravelType({ source, text, type }: TravelTypeProps){
                 <Text 
                     color="dark.text" 
                     fontWeight="600" 
-                    fontSize={["18px","24px"]}
+                    fontSize={["15px","18px", "18px","24px"]}
                 >
                     {text}
                 </Text>
