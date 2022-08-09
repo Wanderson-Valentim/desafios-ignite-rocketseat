@@ -1,5 +1,6 @@
-import { MovieCard } from '../components/MovieCard';
+import MovieCard from '../components/MovieCard';
 import { GenreResponseProps, MovieProps } from '../assets/Interfaces'
+import React from 'react';
 
 
 interface ContentProps {
@@ -8,7 +9,7 @@ interface ContentProps {
 }
 
 
-export function Content({selectedGenre,movies}:ContentProps) {
+function Content({selectedGenre,movies}:ContentProps) {
   return(
     <div className="container">
       <header>
@@ -25,3 +26,11 @@ export function Content({selectedGenre,movies}:ContentProps) {
     </div>
   )
 }
+
+
+export default React.memo(Content, (prevProps , nextProps) => {
+  const selectedGenreIsEqual = Object.is(prevProps.selectedGenre, nextProps.selectedGenre)
+  const moviesIsEqual = Object.is(prevProps.movies, nextProps.movies)
+
+  return selectedGenreIsEqual && moviesIsEqual
+});

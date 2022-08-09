@@ -1,35 +1,16 @@
-import { useEffect, useState } from 'react';
-import { Button } from '../components/Button';
-import { api } from '../services/api';
+import Button from '../components/Button';
+import { GenreResponseProps } from '../assets/Interfaces'
+import React from 'react';
 
-
-interface GenreResponseProps {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
-}
 
 interface SideBarProps {
-  setSelectedGenreId(id:number):void,
-  selectedGenreId: number
+  handleClickButton(id:number):void,
+  selectedGenreId: number,
+  genres: GenreResponseProps[],
 }
 
 
-export function SideBar({setSelectedGenreId, selectedGenreId}:SideBarProps) {
-  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
-  
-
-  useEffect(() => {
-    api.get<GenreResponseProps[]>('genres').then(response => {
-      setGenres(response.data);
-    });
-  }, []);
-
-  function handleClickButton(id: number) {
-    setSelectedGenreId(id);
-  }
-
-
+function SideBar({ handleClickButton, selectedGenreId, genres }: SideBarProps) {
   return(
     <>
       <nav className="sidebar">
@@ -51,3 +32,12 @@ export function SideBar({setSelectedGenreId, selectedGenreId}:SideBarProps) {
     </>
   )
 }
+
+
+export default React.memo(SideBar, (prevProps , nextProps) => {
+  const handleClickIsEqual = prevProps.handleClickButton === nextProps.handleClickButton
+  const idIsEqual = prevProps.selectedGenreId === nextProps.selectedGenreId
+  const genresIsEqual = Object.is(prevProps.genres, nextProps.genres)
+
+  return handleClickIsEqual && idIsEqual && genresIsEqual
+});
